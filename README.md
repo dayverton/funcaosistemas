@@ -9,9 +9,9 @@ Disponível em: https://visualstudio.microsoft.com/pt-br/downloads/
 
 - Importante:
 Na instalação do Visual Studio certique-se que as seguintes opcões estejam habilitadas na guia **Componentes Individuais**:
-> Pacote de direcionamento do .NET Framework 4.8
-> SDK do .NET Framework 4.8
-> SQL Server Express 2019 LocalDB
+> Pacote de direcionamento do .NET Framework 4.8,
+SDK do .NET Framework 4.8,
+SQL Server Express 2019 LocalDB
 
 
 ## Como acessar
