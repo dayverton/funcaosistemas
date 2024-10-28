@@ -3,12 +3,19 @@
     ViewBag.Title = "Alterar Cliente";
 }
 @section scripts{
-<script>
+    <script>
         var urlPost = '@Url.Action("Alterar", "Cliente", new { area = "" })';
         var obj = @Html.Raw(Json.Encode(Model));
         var urlRetorno = '@Url.Action("Index", "Cliente", new { area = "" })';
-</script>
+        
+        $(document).ready(function () {            
+            $("#CPF").inputmask("mask", { "mask": "999.999.999-99", 'autoUnmask': true, 'removeMaskOnSubmit': true }, { reverse: true });
+            $("#beneficiarioCPF").inputmask("mask", { "mask": "999.999.999-99", 'autoUnmask': true, 'removeMaskOnSubmit': true }, { reverse: true });
+            
+        });
+    </script>
     @Scripts.Render("~/bundles/altClientes")
+    @Scripts.Render("~/bundles/beneficiarios")
 }
 <h2>@Html.Raw(ViewBag.Title)</h2>
 @Html.Partial("Forms")

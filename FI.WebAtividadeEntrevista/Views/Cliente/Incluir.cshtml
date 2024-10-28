@@ -5,8 +5,14 @@
 @section scripts{
     <script>
         var urlPost = '@Url.Action("Incluir", "Cliente", new { area = "" })';
+
+        $(document).ready(function () {
+            $("#CPF").inputmask("mask", { "mask": "999.999.999-99", 'autoUnmask': true, 'removeMaskOnSubmit': true, 'autoclear': false }, { reverse: true });
+            $("#beneficiarioCPF").inputmask("mask", { "mask": "999.999.999-99", 'autoUnmask': true, 'removeMaskOnSubmit': true }, { reverse: true });
+        });
     </script>
     @Scripts.Render("~/bundles/clientes")
+    @Scripts.Render("~/bundles/beneficiarios")
 }
 <h2>@Html.Raw(ViewBag.Title)</h2>
 @Html.Partial("Forms")
